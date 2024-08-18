@@ -1,0 +1,260 @@
+body {
+  margin: 0;
+  margin-bottom: 60px;
+  background-color: rgb(245, 245, 245);
+}
+
+.main-header-box {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 74px;
+  z-index: 100;
+  backdrop-filter: blur(0.1px); /* Start with no blur */
+  -webkit-backdrop-filter: blur(0.1px);
+  background-color: rgba(245, 245, 245, 0.1); /* Initial background color */
+  transition: backdrop-filter 0.5s ease, background-color 0.5s ease;
+}
+
+.main-header-box.fade-in {
+  backdrop-filter: blur(10px); /* End blur effect */
+  -webkit-backdrop-filter: blur(10px);
+  background-color: rgba(245, 245, 245, 0.5); /* Final background color */
+}
+
+.header {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: none;
+  border-radius: 32px;
+  padding: 10px 20px;
+  width: 400px;
+  box-sizing: border-box;
+  background-color: white;
+  z-index: 101;
+}
+
+.header-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-button {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 300;
+  font-size: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  padding: 5px 10px;
+  border-radius: 32px;
+}
+
+.header-button:hover {
+  background-color: rgb(200, 200, 200);
+}
+
+.main {
+  margin: 0;
+  position: relative;
+  box-sizing: border-box;
+  display: block;
+}
+
+.main-flexbox {
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.pictures {
+  margin: 0;
+  padding: 30px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  border-bottom: 1px solid rgb(200, 200, 200);
+}
+
+.pictures-flexbox {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 0px;
+}
+
+.picture-box {
+  margin: 40px -15px;
+  padding: 0;
+  transition: 0.3s;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.pictures-flexbox:hover .picture-box {
+  margin: 40px 10px;
+}
+
+.pictures-flexbox:hover .picture-1,
+.pictures-flexbox:hover .picture-2,
+.pictures-flexbox:hover .picture-3,
+.pictures-flexbox:hover .picture-4 {
+  transform: rotate(0deg);
+}
+
+.picture-1,
+.picture-2,
+.picture-3,
+.picture-4 {
+  margin: 0;
+  padding: 0;
+  width: 250px;
+  height: 250px;
+  border-radius: 16px;
+  transition: 0.3s;
+  overflow: hidden;
+}
+
+.picture-1 {
+  transform: rotate(5deg);
+}
+
+.picture-2 {
+  transform: rotate(-5deg);
+}
+
+.picture-3 {
+  transform: rotate(5deg);
+}
+
+.picture-4 {
+  transform: rotate(-5deg);
+}
+
+.picture-1 img,
+.picture-2 img,
+.picture-3 img,
+.picture-4 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+  transition: transform 0.3s;
+}
+
+.picture-1 img:hover,
+.picture-2 img:hover,
+.picture-3 img:hover,
+.picture-4 img:hover {
+  transform: scale(1.1);
+}
+
+.picture-text {
+  margin: 0;
+  padding: 20px 0 10px;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 300;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.general-box {
+  margin: 0;
+  padding: 30px 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid rgb(200, 200, 200);
+}
+
+.general-box-flexbox {
+  margin: 0;
+  padding: 0;
+  width: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  flex: 1 1 0;
+}
+
+.general-box-flexbox div,
+.title-box,
+.text-box,
+.end-text {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 300;
+  font-size: 20px;
+  padding: 5px 0;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.title-box {
+  font-size: 30px;
+  width: 400px;
+  padding: 10px 0;
+}
+
+.link-box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.text-box {
+  width: 400px;
+  padding: 10px 0;
+}
+
+.end-text {
+  font-size: 15px;
+  align-items: center;
+  padding: 0 40px;
+  transform: opacity 0.3s;
+}
+
+.no-underline {
+  text-decoration: none;
+  color: inherit; /* Optional: to inherit the color of the parent element */
+}
